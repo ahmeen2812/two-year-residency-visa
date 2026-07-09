@@ -12,36 +12,39 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  // 1. Ensure this matches your NEW live URL exactly
+  metadataBase: new URL('https://two-year-residency-visa.vercel.app'), 
+  
   title: {
     default: "SULTAN Travel & Tourism | UAE 2-Year Freelance & Residence Visa Hub",
     template: "%s | SULTAN Hub"
   },
-  description: "Official UAE 2-Year Freelance and Employment Residence Visa processing. Specialized services for Pakistan, India, Bangladesh, and worldwide clients. Fast-track Emirates ID & Labour approval in Dubai.",
-  keywords: ["UAE Freelance Visa", "Dubai 2 Year Residence Visa", "Sultan Travel and Tourism", "Dubai Visa for Pakistanis", "Indian Visa UAE", "Bangladesh Visa Dubai", "Family Sponsorship Dubai", "Ejari Services Deira"],
-  authors: [{ name: "Ahmed Touqeer", url: "https://www.linkedin.com/in/ahmed-touqeer-4105503a7" }],
-  creator: "Ahmed Touqeer",
+  description: "Official UAE 2-Year Freelance and Employment Residence Visa processing. Specialized services for Pakistan, India, Bangladesh, and worldwide clients.",
+  
   openGraph: {
-  type: "website",
-  locale: "en_AE",
-  url: "https://two-year-residency-visa.vercel.app", // This must match your final domain
-  siteName: "SULTAN Travel & Tourism LLC",
-  title: "UAE 2-Year Freelance & Residence Visa | SULTAN Hub Dubai",
-  description: "Official 2-Year residency processing for Pakistan, India, Bangladesh and worldwide. Start your Dubai journey with SULTAN Hub.",
-  images: [
-    {
-      url: "/assets/images/dubai-hero.jpg", // WhatsApp will pull this image
-      width: 1200,
-      height: 630,
-      alt: "SULTAN Travel and Tourism Dubai",
-    },
-  ],
-},
+    type: "website",
+    locale: "en_AE",
+    url: "https://two-year-residency-visa.vercel.app",
+    siteName: "SULTAN Travel & Tourism LLC",
+    title: "UAE 2-Year Freelance & Residence Visa | SULTAN Hub Dubai",
+    description: "Start your Dubai journey with SULTAN Hub. Official 2-Year residency processing starting from 6,000 AED.",
+    images: [
+      {
+        // 2. We use the FULL absolute path here to force WhatsApp to find it
+        url: 'https://two-year-residency-visa.vercel.app/assets/images/dubai-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: "SULTAN Travel & Tourism Dubai Burj Khalifa",
+      },
+    ],
+  },
   twitter: {
     card: "summary_large_image",
     title: "SULTAN Hub | UAE 2-Year Residence Visa",
     description: "Fast-track your Dubai residency with SULTAN Travel and Tourism LLC.",
-    images: ["/assets/images/dubai-hero.jpg"],
+    images: ['https://two-year-residency-visa.vercel.app/assets/images/dubai-hero.jpg'],
   },
+
   robots: {
     index: true,
     follow: true,
