@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
   type: "website",
   locale: "en_AE",
-  url: "https://sultan-two-year-residency-visa.vercel.app", // This must match your final domain
+  url: "https://two-year-residency-visa.vercel.app", // This must match your final domain
   siteName: "SULTAN Travel & Tourism LLC",
   title: "UAE 2-Year Freelance & Residence Visa | SULTAN Hub Dubai",
   description: "Official 2-Year residency processing for Pakistan, India, Bangladesh and worldwide. Start your Dubai journey with SULTAN Hub.",
