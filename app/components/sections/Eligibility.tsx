@@ -193,7 +193,7 @@ export default function Eligibility() {
   };
 
   return (
-    <section id="eligibility" className="relative py-12 md:py-24 lg:py-40 bg-white px-6 overflow-hidden">
+    <section id="eligibility" className="relative pt-12 md:pt-24 lg:pt-32 pb-0 bg-white px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* HEADER */}

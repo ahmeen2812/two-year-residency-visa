@@ -159,11 +159,11 @@ export default function Pricing({ onSelect }: PricingProps) {
   };
 
   return (
-    <section id="pricing" className="relative py-12 md:py-24 lg:py-40 bg-white px-6 overflow-hidden border-t border-black/[0.02]">
+    <section id="pricing" className="relative pt-0 pb-12 md:pb-24 lg:pb-32 bg-white px-6 overflow-hidden border-t border-black/[0.02]">
       <div className="max-w-7xl mx-auto">
         
         {/* REFINED HEADER: FLUID PADDING */}
-        <div className="text-center mb-16 md:mb-32">
+        <div className="text-center mb-12 md:mb-20">
           <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="text-[#B38B59] font-heading font-bold tracking-[0.6em] uppercase text-[9px] mb-4 block">Investment Path</motion.span>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-4xl md:text-7xl lg:text-8xl font-heading font-black text-[#0F172A] tracking-tighter leading-none uppercase">
             FINANCIAL <br /> <span className="text-[#B38B59]">STRUCTURE.</span>
