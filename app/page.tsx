@@ -137,15 +137,15 @@ export default function Home() {
                   immigration policies into seamless global mobility solutions since 2024.
                 </p>
                 <div className="flex gap-8">
-                   {['Instagram', 'Telegram', 'Facebook'].map(social => (
-                     <a 
-                      key={social} 
-                      href="#" 
-                      className="text-[10px] font-black uppercase tracking-widest text-white/30 hover:text-[#B38B59] transition-colors"
-                     >
-                      {social}
-                     </a>
-                   ))}
+                 {['Instagram', 'Telegram', 'Facebook'].map(social => (
+  <a 
+    key={social} 
+    href={social === 'Telegram' ? "https://t.me/DubaiFreelanceVisa" : "#"} 
+    className="text-[10px] font-black uppercase tracking-widest text-white/30 hover:text-[#B38B59] transition-colors"
+  >
+    {social}
+  </a>
+))}
                 </div>
               </div>
 
