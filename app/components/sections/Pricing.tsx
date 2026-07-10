@@ -230,7 +230,9 @@ export default function Pricing({ onSelect }: PricingProps) {
           <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white px-6"><HelpCircle size={32} strokeWidth={1} className="text-[#B38B59]" /></div>
           <h5 className="text-[11px] font-black text-[#0F172A] uppercase tracking-[0.4em] mb-6">Executive Regulatory Notice</h5>
           <p className="text-[11px] md:text-[12px] font-medium text-[#64748B] uppercase tracking-[0.15em] leading-relaxed">
-            Final investment fluctuates based on government quotas, immigration rules, and approval status. SULTAN Travel & Tourism LLC provides the final binding quote post-document audit.
+          PRICES CAN SOMETIMES BE LOWER OR HIGHER DEPENDING ON MARKET
+CONDITIONS AND UAE GOVERNMENT REGULATIONS. FINAL PRICE IS
+CONFIRMED AFTER DOCUMENT REVIEW AND TEAM APPROVAL.
           </p>
         </motion.div>
       </div>

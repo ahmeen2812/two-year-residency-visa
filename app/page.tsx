@@ -222,13 +222,12 @@
 //   );
 // }
 
-
 "use client";
 
 /**
  * @file page.tsx
  * @description Master Flagship Portal for SULTAN Travel & Tourism.
- * @version 7.5.0 - Universal Responsiveness & Border Logic Active
+ * @version 8.0.0 - Production Stabilized & Overflow Fixed
  * @architect Ahmed Touqeer
  */
 
@@ -253,7 +252,7 @@ import ApplicationForm from "./components/sections/ApplicationForm";
 import Contact from "./components/sections/Contact";
 
 export default function Home() {
-  // --- SEO STRUCTURED DATA ---
+  // --- SEO STRUCTURED DATA (JSON-LD) ---
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -285,11 +284,14 @@ export default function Home() {
   const scrollToApply = () => {
     const element = document.getElementById('apply');
     if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -361,6 +363,7 @@ export default function Home() {
 
         {/* 11. THE EXECUTIVE FOOTER */}
         <footer className="relative bg-[#0F172A] pt-24 md:pt-32 pb-12 px-6 overflow-hidden">
+          {/* Background Design Decor */}
           <div className="absolute top-0 right-0 w-full h-full opacity-[0.03] pointer-events-none">
             <div className="absolute top-0 right-0 w-1/2 h-full border-l border-white/20 skew-x-12" />
           </div>
@@ -378,7 +381,7 @@ export default function Home() {
                 <div className="flex gap-8">
                  {['Instagram', 'Telegram', 'Facebook', 'TikTok'].map(social => {
                    let href = "#";
-                   if(social === 'Telegram') href = "https://t.me/Dubaifreelancevisa07";
+                   if(social === 'Telegram') href = "https://t.me/DubaiFreelanceVisa";
                    if(social === 'TikTok') href = "https://www.tiktok.com/@dubai.pro.service7";
                    return (
                     <a key={social} href={href} target="_blank" className="text-[10px] font-black uppercase tracking-widest text-white/30 hover:text-[#B38B59] transition-colors">
@@ -389,14 +392,23 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-8 md:gap-10">
+              {/* FIXED: GRID-COLS-1 FOR MOBILE TO PREVENT EMAIL OVERFLOW */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-12">
                 <div className="flex flex-col gap-4">
                   <span className="text-[10px] font-black uppercase tracking-widest text-[#B38B59]">HQ Office</span>
-                  <p className="text-white/60 text-[11px] leading-loose uppercase tracking-widest">Frij Al Murar<br />Deira Dubai<br />United Arab Emirates</p>
+                  <p className="text-white/60 text-[11px] leading-loose uppercase tracking-widest">
+                    Frij Al Murar<br />
+                    Deira Dubai<br />
+                    United Arab Emirates
+                  </p>
                 </div>
                 <div className="flex flex-col gap-4">
                   <span className="text-[10px] font-black uppercase tracking-widest text-[#B38B59]">Direct Inquiries</span>
-                  <p className="text-white/60 text-[11px] leading-loose uppercase tracking-widest">+971 58 914 9609<br />sultanvisahub@gmail.com</p>
+                  {/* FIX: Lowercase Email and Dynamic Stack */}
+                  <p className="text-white/60 text-[11px] leading-loose">
+                    <span className="uppercase tracking-widest font-bold">+971 58 914 9609</span><br />
+                    <span className="lowercase tracking-normal opacity-80 text-xs md:text-sm">sultanvisahub@gmail.com</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -405,7 +417,7 @@ export default function Home() {
             <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-end gap-12">
               <div className="flex flex-col gap-2">
                  <span className="text-[9px] font-bold uppercase tracking-[0.5em] text-white/20">Precision in Motion © 2026 SULTAN HUB</span>
-                 <span className="text-[8px] uppercase tracking-[0.2em] text-white/10">Dubai Government Approved Hub • License No. 1284551</span>
+                 <span className="text-[8px] uppercase tracking-[0.2em] text-white/10">Licensed Travel & Tourism Agency • Government Approved</span>
               </div>
 
               <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="flex flex-col items-start md:items-end gap-3 group">
